@@ -58,7 +58,8 @@ public class simpleCalcTest {
     	String[] args = {};
     	in.inputln("10 - 11");
     	simpleCalc.main(args);
-    	String actual = "計算式を入力して下さい:入力された式は 10.0 - 11.0 です\r\n" +
+    	String actual = "計算式を入力して下さい:\r\n"
+                + "入力された式は 10.0 - 11.0 です\r\n" +
     			"計算結果は -1.0 です\r\n";
     	assertEquals(actual,outContent.toString());
     }
@@ -68,8 +69,9 @@ public class simpleCalcTest {
     	String[] args = {};
     	in.inputln("99999 + 1");
     	simpleCalc.main(args);
-    	String actual = "計算式を入力して下さい:入力された式は 99999.0 + 1.0 です\r\n" +
-    			"計算結果は 100000.0 です\r\n \r\n";
+    	String actual = "計算式を入力して下さい:99999 + 1\r\n"
+                + "入力された式は 99999.0 + 1.0 です\r\n" +
+    			"計算結果は 100000.0 です\r\n";
     	assertEquals(actual,outContent.toString());
     }
 
