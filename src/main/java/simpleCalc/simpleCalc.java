@@ -83,7 +83,7 @@ public class simpleCalc {
         }
 
         System.out.println("入力された式は " + number1 + " " + calc + " " + number2 + " です");
-        System.out.println("計算結果は " + result + " です");
+        System.out.println("計算結果は " + result + " です ");
 
         scan.close();
     }
