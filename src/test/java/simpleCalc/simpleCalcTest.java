@@ -1,5 +1,6 @@
 package simpleCalc;
 
+import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
 import java.io.ByteArrayOutputStream;
@@ -44,11 +45,11 @@ public class simpleCalcTest {
     	String[] args = {}; /*文字列を入力*/
     	in.inputln("5.0 * 2.0");
     	simpleCalc.main(args); /*mainメソッドを実行*/
-    	
+
     	/*期待値を入力*/
     	String actual = "計算式を入力して下さい:入力された式は 5.0 * 2.0 です\r\n" +
     			"計算結果は 10.0 です\r\n";
-    	
+
     	/*期待値と実行した標準出力の値が等しいか確認*/
     	assertEquals(actual,outContent.toString());
     }
@@ -90,7 +91,7 @@ public class simpleCalcTest {
     	simpleCalc.main(args);
     	String actual = "計算式を入力して下さい:入力された式は 5.0 % 2.0 です\r\n" +
     			"計算結果は 1.0 です\r\n";
-    	assertEquals(actual,outContent.toString());
+    	assertThat(actual, is(outContent.toString()));
     }
 
 }
