@@ -89,8 +89,8 @@ public class simpleCalcTest {
     	String[] args = {};
     	in.inputln("5 % 2");
     	simpleCalc.main(args);
-    	String actual = "計算式を入力して下さい:入力された式は 5.0 % 2.0 です\r\n" +
-    			"計算結果は 1.0 です\r\n";
+    	String actual = "計算式を入力して下さい:入力された式は 5.0 % 2.0 です\n" +
+    			"計算結果は 1.0 です\n";
     	assertThat(actual, is(outContent.toString()));
     }
 
