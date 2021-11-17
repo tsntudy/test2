@@ -51,7 +51,7 @@ public class simpleCalcTest {
     			"計算結果は 10.0 です\r\n";
 
     	/*期待値と実行した標準出力の値が等しいか確認*/
-    	assertEquals(actual,outContent.toString());
+    	assertThat(actual, is(outContent.toString()));
     }
 
     @Test
@@ -61,7 +61,7 @@ public class simpleCalcTest {
     	simpleCalc.main(args);
     	String actual = "計算式を入力して下さい:入力された式は 10.0 - 11.0 です\r\n" +
     			"計算結果は -1.0 です\r\n";
-    	assertEquals(actual,outContent.toString());
+    	assertThat(actual, is(outContent.toString()));
     }
 
     @Test
@@ -71,7 +71,7 @@ public class simpleCalcTest {
     	simpleCalc.main(args);
     	String actual = "計算式を入力して下さい:入力された式は 99999.0 + 1.0 です\r\n" +
     			"計算結果は 100000.0 です\r\n";
-    	assertEquals(actual,outContent.toString());
+    	assertThat(actual, is(outContent.toString()));
     }
 
     @Test
@@ -81,7 +81,7 @@ public class simpleCalcTest {
     	simpleCalc.main(args);
     	String actual = "計算式を入力して下さい:入力された式は 1.0 / 3.0 です\r\n" +
     			"計算結果は 0.3333333333333333 です\r\n";
-    	assertEquals(actual,outContent.toString());
+    	assertThat(actual, is(outContent.toString()));
     }
 
     @Test
